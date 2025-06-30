@@ -1,7 +1,16 @@
+import { ReactMock } from 'react-mock-component';
 import { expect } from 'vitest';
-import { reactMockMatcher } from './matcher';
+import { ReactMockExpect, reactMockMatcher } from './matcher';
+
+declare module 'vitest' {
+  interface ExpectStatic {
+    <Props>(mock: ReactMock<Props>): ReactMockExpect<Props> & {
+      not: ReactMockExpect<Props>;
+    };
+  }
+
+  // noinspection JSUnusedGlobalSymbols
+  interface Matchers<T = any> extends ReactMockExpect<T> {}
+}
 
 expect.extend(reactMockMatcher);
-
-// Only exporting this to make TS emit the matcher declaration.
-export { reactMockMatcher };

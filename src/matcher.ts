@@ -12,18 +12,7 @@ import {
   printCall,
 } from './utils';
 
-declare module 'vitest' {
-  interface ExpectStatic {
-    <Props>(mock: ReactMock<Props>): ReactMockExpect<Props> & {
-      not: ReactMockExpect<Props>;
-    };
-  }
-
-  // noinspection JSUnusedGlobalSymbols
-  interface Matchers<T = any> extends ReactMockExpect<T> {}
-}
-
-interface ReactMockExpect<Props> {
+export interface ReactMockExpect<Props> {
   /**
    * Check that the mock is currently mounted.
    *

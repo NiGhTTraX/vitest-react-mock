@@ -3,7 +3,7 @@ import React from 'react';
 import createReactMock from 'react-mock-component';
 import stripAnsi from 'strip-ansi';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { reactMockMatcher } from '../src/matcher';
+import '../src';
 
 function expectToThrowAnsiless(cb: () => void, message: string) {
   expect(cb).toThrow();
@@ -16,8 +16,6 @@ function expectToThrowAnsiless(cb: () => void, message: string) {
 }
 
 describe('matcher', () => {
-  expect.extend(reactMockMatcher);
-
   describe('toBeMounted', () => {
     it('should check that a mock is currently mounted', async () => {
       const Mock = createReactMock();
