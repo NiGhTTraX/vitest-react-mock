@@ -1,0 +1,9 @@
+{
+  "extends": "@tdd-buffet/tsconfig",
+
+  "compilerOptions": {
+    "jsx": "react",
+    "types": [],
+    "useUnknownInCatchVariables": false
+  }
+}
