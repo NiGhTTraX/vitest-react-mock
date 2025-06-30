@@ -5,5 +5,7 @@
     "jsx": "react",
     "types": [],
     "useUnknownInCatchVariables": false
-  }
+  },
+
+  "exclude": ["dist"]
 }

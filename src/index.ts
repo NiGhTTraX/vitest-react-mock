@@ -8,9 +8,6 @@ declare module 'vitest' {
       not: ReactMockExpect<Props>;
     };
   }
-
-  // noinspection JSUnusedGlobalSymbols
-  interface Matchers<T = any> extends ReactMockExpect<T> {}
 }
 
 expect.extend(reactMockMatcher);

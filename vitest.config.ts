@@ -15,5 +15,9 @@ export default defineConfig({
       exclude: ['node_modules/', 'tests/', 'src/index.ts'],
     },
     include: ['**/*.{test,spec}.{ts,tsx}'],
+    typecheck: {
+      enabled: true,
+      include: ['**/*.{test-d,spec-d}.{ts,tsx}'],
+    },
   },
 });
