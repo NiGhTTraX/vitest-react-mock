@@ -1,6 +1,6 @@
 {
   "name": "vitest-react-mock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vitest helper for react-mock-component",
   "keywords": [
     "vitest",
