@@ -3,7 +3,7 @@ import React from 'react';
 import createReactMock from 'react-mock-component';
 import stripAnsi from 'strip-ansi';
 import { beforeEach, describe, expect, it } from 'vitest';
-import '../src';
+import '../src/index.js';
 
 function expectToThrowAnsiless(cb: () => void, message: string) {
   expect(cb).toThrow();

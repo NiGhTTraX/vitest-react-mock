@@ -1,11 +1,7 @@
 {
-  "extends": "@tdd-buffet/tsconfig",
-
-  "compilerOptions": {
-    "jsx": "react",
-    "types": [],
-    "useUnknownInCatchVariables": false
-  },
-
-  "exclude": ["dist"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.test.json" }
+  ]
 }

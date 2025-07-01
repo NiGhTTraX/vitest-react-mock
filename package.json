@@ -17,15 +17,26 @@
   "author": "Andrei Picus",
   "license": "MIT",
   "homepage": "https://github.com/NiGhTTraX/vitest-react-mock",
-  "main": "dist/index",
-  "types": "dist/index",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "pnpm run clean && pnpm run compile",
-    "clean": "rm -rf ./dist",
-    "compile": "tsc -p tsconfig.build.json",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --tsconfig tsconfig.build.json",
+    "check-types": "attw --pack .",
     "prepublishOnly": "pnpm run build",
     "release": "standard-version",
     "lint": "eslint --ext ts,tsx,js .",
@@ -42,6 +53,7 @@
     "vitest": "^3.2.0"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "~0.18.0",
     "@nighttrax/eslint-config-tsx": "~11.0.0",
     "@tdd-buffet/tsconfig": "~1.0.4",
     "@testing-library/react": "~16.1.0",
@@ -55,6 +67,7 @@
     "strip-ansi": "~6.0.0",
     "typescript": "~4.9.0",
     "@vitest/coverage-v8": "~3.2.4",
+    "tsup": "~8.5.0",
     "vitest": "~3.2.4"
   },
   "packageManager": "pnpm@9.14.4"

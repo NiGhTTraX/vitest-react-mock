@@ -10,7 +10,7 @@ import {
   indent,
   IndexedRender,
   printCall,
-} from './utils';
+} from './utils.js';
 
 export interface ReactMockExpect<Props> {
   /**

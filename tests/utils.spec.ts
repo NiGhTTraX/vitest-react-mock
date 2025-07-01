@@ -1,6 +1,6 @@
 import stripAnsi from 'strip-ansi';
 import { describe, expect, it } from 'vitest';
-import { diffProps } from '../src/utils';
+import { diffProps } from '../src/utils.js';
 
 describe('diffProps', () => {
   it('should return empty for matching symmetric props', () => {
