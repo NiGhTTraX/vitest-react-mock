@@ -1,14 +1,13 @@
 import 'vitest';
-import { MatcherState } from '@vitest/expect';
+import type { MatcherState } from '@vitest/expect';
 import { printExpected, printReceived } from 'jest-matcher-utils';
-import { ReactMock } from 'react-mock-component';
+import type { ReactMock } from 'react-mock-component';
+import type { DeepPartial, IndexedRender, UnknownProps } from './utils.js';
 import {
   deepEquals,
-  DeepPartial,
   diffProps,
   getMatchingCalls,
   indent,
-  IndexedRender,
   printCall,
 } from './utils.js';
 
@@ -94,22 +93,22 @@ type Result = {
 };
 
 type ReactMockMatcher = {
-  toBeMounted: (this: MatcherState, mock: ReactMock<any>) => Result;
-  toHaveBeenRendered: (this: MatcherState, mock: ReactMock<any>) => Result;
-  toHaveBeenRenderedWith: <Props extends {}>(
+  toBeMounted: (this: MatcherState, mock: ReactMock<unknown>) => Result;
+  toHaveBeenRendered: (this: MatcherState, mock: ReactMock<unknown>) => Result;
+  toHaveBeenRenderedWith: <Props extends UnknownProps>(
     this: MatcherState,
     mock: ReactMock<Props>,
-    expected: DeepPartial<Props>
+    expected: DeepPartial<Props>,
   ) => Result;
-  toHaveProps: <Props extends {}>(
+  toHaveProps: <Props extends UnknownProps>(
     this: MatcherState,
     mock: ReactMock<Props>,
-    expected: DeepPartial<Props>
+    expected: DeepPartial<Props>,
   ) => Result;
 };
 
 export const reactMockMatcher: ReactMockMatcher = {
-  toBeMounted(this: MatcherState, mock: ReactMock<any>) {
+  toBeMounted(this: MatcherState, mock: ReactMock<unknown>) {
     const { isNot } = this;
     const { printReceived, matcherHint } = this.utils;
 
@@ -131,22 +130,26 @@ Previous number of renders: ${received}`,
     };
   },
 
-  toHaveBeenRendered(this: MatcherState, mock: ReactMock<any>, times?: number) {
+  toHaveBeenRendered(
+    this: MatcherState,
+    mock: ReactMock<unknown>,
+    times?: number,
+  ) {
     const { isNot } = this;
     const { printExpected, printReceived, matcherHint } = this.utils;
 
     const hint = matcherHint('toHaveBeenRendered', `mock`, '', {
       isNot,
     });
-    // eslint-disable-next-line no-nested-ternary
+
     const expected = isNot
       ? times === undefined
         ? `${printExpected(0)}`
         : `!= ${printExpected(times)}`
       : times === undefined
-      ? `>= ${printExpected(1)}`
-      : ` = ${printExpected(times)}`;
-    // eslint-disable-next-line no-nested-ternary
+        ? `>= ${printExpected(1)}`
+        : ` = ${printExpected(times)}`;
+
     const received = isNot
       ? times === undefined
         ? printReceived(mock.renderCalls.length)
@@ -164,10 +167,10 @@ Received number of renders: ${received}`,
     };
   },
 
-  toHaveBeenRenderedWith<Props extends {}>(
+  toHaveBeenRenderedWith<Props extends UnknownProps>(
     this: MatcherState,
     mock: ReactMock<Props>,
-    expected: DeepPartial<Props>
+    expected: DeepPartial<Props>,
   ) {
     const { isNot } = this;
     const { matcherHint, EXPECTED_COLOR, RECEIVED_COLOR } = this.utils;
@@ -213,10 +216,10 @@ ${indent(
     .map(
       printCall(
         expected,
-        (actual, expected2) => `\n${diffProps(actual, expected2)}`
-      )
+        (actual, expected2) => `\n${diffProps(actual, expected2)}`,
+      ),
     )
-    .join(`\n`)
+    .join(`\n`),
 )}
 ${outro}`;
     };
@@ -228,7 +231,7 @@ ${outro}`;
 ${indent(
   matchingCalls
     .map(printCall(expected, (a) => ` ${printReceived(a)}`))
-    .join(`\n`)
+    .join(`\n`),
 )}
 ${outro}`,
       pass,
@@ -237,10 +240,10 @@ ${outro}`,
     };
   },
 
-  toHaveProps<Props extends {}>(
+  toHaveProps<Props extends UnknownProps>(
     this: MatcherState,
     mock: ReactMock<Props>,
-    expected: DeepPartial<Props>
+    expected: DeepPartial<Props>,
   ) {
     const { isNot } = this;
     const { matcherHint, EXPECTED_COLOR, RECEIVED_COLOR } = this.utils;

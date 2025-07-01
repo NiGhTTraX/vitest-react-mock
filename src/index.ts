@@ -1,6 +1,7 @@
-import { ReactMock } from 'react-mock-component';
+import type { ReactMock } from 'react-mock-component';
 import { expect } from 'vitest';
-import { ReactMockExpect, reactMockMatcher } from './matcher.js';
+import type { ReactMockExpect } from './matcher.js';
+import { reactMockMatcher } from './matcher.js';
 
 declare module 'vitest' {
   interface ExpectStatic {

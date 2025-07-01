@@ -48,7 +48,7 @@ describe('matcher', () => {
           `expect(mock).toBeMounted()
 
 Expected the mock to currently be mounted, but it is not.
-Previous number of renders: 0`
+Previous number of renders: 0`,
         );
       });
 
@@ -60,7 +60,7 @@ Previous number of renders: 0`
           `expect(mock).not.toBeMounted()
 
 Expected the mock to currently not be mounted, but it is.
-Previous number of renders: 1`
+Previous number of renders: 1`,
         );
       });
     });
@@ -104,7 +104,7 @@ Previous number of renders: 1`
           `expect(mock).toHaveBeenRendered()
 
 Expected number of renders: >= 1
-Received number of renders:    0`
+Received number of renders:    0`,
         );
 
         expectToThrowAnsiless(
@@ -112,7 +112,7 @@ Received number of renders:    0`
           `expect(mock).toHaveBeenRendered()
 
 Expected number of renders:  = 2
-Received number of renders:    0`
+Received number of renders:    0`,
         );
       });
 
@@ -124,7 +124,7 @@ Received number of renders:    0`
           `expect(mock).not.toHaveBeenRendered()
 
 Expected number of renders: 0
-Received number of renders: 1`
+Received number of renders: 1`,
         );
 
         expectToThrowAnsiless(
@@ -132,7 +132,7 @@ Received number of renders: 1`
           `expect(mock).not.toHaveBeenRendered()
 
 Expected number of renders: != 1
-Received number of renders:    1`
+Received number of renders:    1`,
         );
       });
     });
@@ -146,18 +146,18 @@ Received number of renders:    1`
       render(<Mock foo="baz" />);
 
       expect(() =>
-        expect(Mock).toHaveBeenRenderedWith({ foo: 'no' })
+        expect(Mock).toHaveBeenRenderedWith({ foo: 'no' }),
       ).toThrow();
       expect(Mock).not.toHaveBeenRenderedWith({ foo: 'no' });
 
       expect(Mock).toHaveBeenRenderedWith({ foo: 'bar' });
       expect(() =>
-        expect(Mock).not.toHaveBeenRenderedWith({ foo: 'bar' })
+        expect(Mock).not.toHaveBeenRenderedWith({ foo: 'bar' }),
       ).toThrow();
 
       expect(Mock).toHaveBeenRenderedWith({ foo: 'baz' });
       expect(() =>
-        expect(Mock).not.toHaveBeenRenderedWith({ foo: 'baz' })
+        expect(Mock).not.toHaveBeenRenderedWith({ foo: 'baz' }),
       ).toThrow();
     });
 
@@ -168,18 +168,18 @@ Received number of renders:    1`
       render(<Mock foo="baz" bar={42} />);
 
       expect(() =>
-        expect(Mock).toHaveBeenRenderedWith({ foo: 'no' })
+        expect(Mock).toHaveBeenRenderedWith({ foo: 'no' }),
       ).toThrow();
       expect(Mock).not.toHaveBeenRenderedWith({ foo: 'no' });
 
       expect(Mock).toHaveBeenRenderedWith({ foo: 'bar' });
       expect(() =>
-        expect(Mock).not.toHaveBeenRenderedWith({ foo: 'bar' })
+        expect(Mock).not.toHaveBeenRenderedWith({ foo: 'bar' }),
       ).toThrow();
 
       expect(Mock).toHaveBeenRenderedWith({ bar: 23 });
       expect(() =>
-        expect(Mock).not.toHaveBeenRenderedWith({ bar: 23 })
+        expect(Mock).not.toHaveBeenRenderedWith({ bar: 23 }),
       ).toThrow();
 
       expect(Mock).toHaveBeenRenderedWith({});
@@ -193,12 +193,12 @@ Received number of renders:    1`
 
       expect(Mock).toHaveBeenRenderedWith({ foo: { bar: 23 } });
       expect(() =>
-        expect(Mock).not.toHaveBeenRenderedWith({ foo: { bar: 23 } })
+        expect(Mock).not.toHaveBeenRenderedWith({ foo: { bar: 23 } }),
       ).toThrow();
 
       expect(Mock).toHaveBeenRenderedWith({ foo: { baz: true } });
       expect(() =>
-        expect(Mock).not.toHaveBeenRenderedWith({ foo: { baz: true } })
+        expect(Mock).not.toHaveBeenRenderedWith({ foo: { baz: true } }),
       ).toThrow();
     });
 
@@ -210,7 +210,7 @@ Received number of renders:    1`
       render(<Mock foo="baz" bar={[7, 8, 9]} />);
 
       expect(Mock).toHaveBeenRenderedWith(
-        expect.objectContaining({ bar: expect.arrayContaining([4, 6]) })
+        expect.objectContaining({ bar: expect.arrayContaining([4, 6]) }),
       );
     });
 
@@ -279,7 +279,7 @@ Received:
     +   "foo": "baz",
       }
 
-Total number of renders: 3`
+Total number of renders: 3`,
         );
       });
 
@@ -297,7 +297,7 @@ Received:
     Render 1: {"bar": 2, "foo": "baz"}
     Render 2: {"bar": 3, "foo": "baz"}
 
-Total number of renders: 3`
+Total number of renders: 3`,
         );
       });
 
@@ -316,7 +316,7 @@ Total number of renders: 3`
 +   "foo": "bar",
   }
 
-Total number of renders: 1`
+Total number of renders: 1`,
         );
       });
     });
@@ -369,7 +369,7 @@ Total number of renders: 1`
       render(<Mock foo="bar" bar={[1, 2, 3]} />);
 
       expect(Mock).toHaveProps(
-        expect.objectContaining({ bar: expect.arrayContaining([2, 3]) })
+        expect.objectContaining({ bar: expect.arrayContaining([2, 3]) }),
       );
     });
 
@@ -396,7 +396,7 @@ Total number of renders: 1`
 +   "foo": "baz",
   }
 
-Number of renders: 2`
+Number of renders: 2`,
         );
       });
 
@@ -408,7 +408,7 @@ Number of renders: 2`
 Expected: not {"foo": "baz"}
 Received: {"bar": 1, "foo": "baz"}
 
-Number of renders: 2`
+Number of renders: 2`,
         );
       });
     });
