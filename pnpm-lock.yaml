@@ -24,9 +24,6 @@ importers:
       '@eslint/js':
         specifier: ~9.29.0
         version: 9.29.0
-      '@tdd-buffet/tsconfig':
-        specifier: ~1.0.4
-        version: 1.0.4(typescript@4.9.3)
       '@testing-library/react':
         specifier: ~16.1.0
         version: 16.1.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.6)(@types/react@18.3.17)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -630,11 +627,6 @@ packages:
 
   '@sinonjs/text-encoding@0.7.3':
     resolution: {integrity: sha512-DE427ROAphMQzU4ENbliGYrBSYPXF+TtLg9S8vzeA+OF4ZKzoDdzfL8sxuMUGS/lgRhM6j1URSk9ghf7Xo1tyA==}
-
-  '@tdd-buffet/tsconfig@1.0.4':
-    resolution: {integrity: sha512-g1w/5wSYvJT4ptcejlL/7URT5GaqRgYc2zi3IOVM4VIADMcRcB4FK9/L84kAeLg/udBzacFj+3tkimghCBE2Eg==}
-    peerDependencies:
-      typescript: ^3.8.3 || ^4.0.0
 
   '@testing-library/dom@10.1.0':
     resolution: {integrity: sha512-wdsYKy5zupPyLCW2Je5DLHSxSfbIp6h80WoHOQc+RPtmPGA52O9x5MJEkv92Sjonpq+poOAtUKhh1kBGAXBrNA==}
@@ -3221,10 +3213,6 @@ snapshots:
       type-detect: 4.1.0
 
   '@sinonjs/text-encoding@0.7.3': {}
-
-  '@tdd-buffet/tsconfig@1.0.4(typescript@4.9.3)':
-    dependencies:
-      typescript: 4.9.3
 
   '@testing-library/dom@10.1.0':
     dependencies:

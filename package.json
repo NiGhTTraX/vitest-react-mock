@@ -54,7 +54,6 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "~0.18.0",
-    "@tdd-buffet/tsconfig": "~1.0.4",
     "@testing-library/react": "~16.1.0",
     "@types/react": "~18.3.12",
     "@vitejs/plugin-react": "~4.6.0",
