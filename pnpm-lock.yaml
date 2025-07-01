@@ -25,8 +25,8 @@ importers:
         specifier: ~9.29.0
         version: 9.29.0
       '@testing-library/react':
-        specifier: ~16.1.0
-        version: 16.1.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.6)(@types/react@18.3.17)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ~16.3.0
+        version: 16.3.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.6)(@types/react@18.3.17)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@types/react':
         specifier: ~18.3.12
         version: 18.3.17
@@ -632,8 +632,8 @@ packages:
     resolution: {integrity: sha512-wdsYKy5zupPyLCW2Je5DLHSxSfbIp6h80WoHOQc+RPtmPGA52O9x5MJEkv92Sjonpq+poOAtUKhh1kBGAXBrNA==}
     engines: {node: '>=18'}
 
-  '@testing-library/react@16.1.0':
-    resolution: {integrity: sha512-Q2ToPvg0KsVL0ohND9A3zLJWcOXXcO8IDu3fj11KhNt0UlCWyFyvnCIBkd12tidB2lkiVRG8VFqdhcqhqnAQtg==}
+  '@testing-library/react@16.3.0':
+    resolution: {integrity: sha512-kFSyxiEDwv1WLl2fgsq6pPBbw5aWKrsY2/noi1Id0TK0UParSF62oFQFGHXIyaG4pp2tEub/Zlel+fjjZILDsw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@testing-library/dom': ^10.0.0
@@ -3225,7 +3225,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/react@16.1.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.6)(@types/react@18.3.17)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@testing-library/react@16.3.0(@testing-library/dom@10.1.0)(@types/react-dom@18.0.6)(@types/react@18.3.17)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.20.1
       '@testing-library/dom': 10.1.0
