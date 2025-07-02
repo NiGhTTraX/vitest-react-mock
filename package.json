@@ -66,7 +66,7 @@
     "react-dom": "~19.1.0",
     "react-mock-component": "~4.1.1",
     "standard-version": "~9.5.0",
-    "strip-ansi": "~6.0.0",
+    "strip-ansi": "~7.1.0",
     "typescript": "~5.8.0",
     "typescript-eslint": "~8.34.0",
     "@vitest/coverage-v8": "~3.2.4",
