@@ -13,8 +13,9 @@ declare module 'vitest' {
 
 expect.extend(reactMockMatcher);
 
-// Exporting this so the vitest import is preserved,
-// so the module augmentation above works.
+// Exporting this to preserve the vitest import,
+// so the module augmentation above works if the user is using
+// [global mode](https://vitest.dev/config/#globals).
 // Without it, the user has to include it via tsconfig#types
 // or an explicit import.
 export { expect };
