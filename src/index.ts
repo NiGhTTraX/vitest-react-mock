@@ -12,3 +12,9 @@ declare module 'vitest' {
 }
 
 expect.extend(reactMockMatcher);
+
+// Exporting this so the vitest import is preserved,
+// so the module augmentation above works.
+// Without it, the user has to include it via tsconfig#types
+// or an explicit import.
+export { expect };
