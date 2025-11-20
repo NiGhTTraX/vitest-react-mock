@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/NiGhTTraX/vitest-react-mock/compare/v1.0.0...v2.0.0) (2025-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drop support for vitest 3
+
+### Bug Fixes
+
+* **deps:** update jest monorepo to ~30.1.0 ([b51864b](https://github.com/NiGhTTraX/vitest-react-mock/commit/b51864bd486d6e659cb342aa298df83e6ad625c8))
+* **deps:** update jest monorepo to ~30.2.0 ([5d4bf31](https://github.com/NiGhTTraX/vitest-react-mock/commit/5d4bf310ede821896367a3af3eed9d41890c6a78))
+* **deps:** update vitest monorepo to v4 ([cbdf03b](https://github.com/NiGhTTraX/vitest-react-mock/commit/cbdf03b01c507b1f17d6d32df3993523ccf769bd))
+
+
+* Drop support for vitest 3 ([f44e0b8](https://github.com/NiGhTTraX/vitest-react-mock/commit/f44e0b84d065364ae0acceabdad402f2b7901d62))
+
 ## [1.0.0](https://github.com/NiGhTTraX/vitest-react-mock/compare/v0.0.4...v1.0.0) (2025-07-04)
 
 First stable release!
