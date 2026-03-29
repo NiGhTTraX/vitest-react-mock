@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import React from 'react';
 import createReactMock from 'react-mock-component';
 import stripAnsi from 'strip-ansi';
 import { beforeEach, describe, expect, it } from 'vitest';

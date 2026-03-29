@@ -9,7 +9,6 @@
 
     "types": [],
     "lib": ["ES6", "DOM"],
-    "jsx": "react",
     "skipLibCheck": true,
 
     "strict": true,

@@ -1,9 +1,11 @@
 {
   "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
   "include": [
     "tests/**/*.spec.ts",
     "tests/**/*.spec.tsx",
-    "tests/**/*.spec-d.ts",
-
+    "tests/**/*.spec-d.ts"
   ]
 }
