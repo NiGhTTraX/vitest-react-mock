@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
 
     "target": "ES6",
-    "downlevelIteration": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
 
