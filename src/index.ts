@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-function-type */
 import type { ReactMock } from 'react-mock-component';
 import { expect } from 'vitest';
 import type { ReactMockExpect } from './matcher.js';
