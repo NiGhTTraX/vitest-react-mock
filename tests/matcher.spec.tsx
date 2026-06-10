@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access */
 import { render } from '@testing-library/react';
 import createReactMock from 'react-mock-component';
 import stripAnsi from 'strip-ansi';
@@ -16,7 +17,7 @@ function expectToThrowAnsiless(cb: () => void, message: string) {
 
 describe('matcher', () => {
   describe('toBeMounted', () => {
-    it('should check that a mock is currently mounted', async () => {
+    it('should check that a mock is currently mounted', () => {
       const Mock = createReactMock();
       Mock.withProps({}).renders(<span>foo</span>);
 

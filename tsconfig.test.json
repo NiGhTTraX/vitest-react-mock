@@ -6,6 +6,7 @@
   "include": [
     "tests/**/*.spec.ts",
     "tests/**/*.spec.tsx",
-    "tests/**/*.spec-d.ts"
+    "tests/**/*.spec-d.ts",
+    "vitest.config.ts"
   ]
 }

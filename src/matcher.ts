@@ -204,7 +204,7 @@ Total number of renders: ${mock.renderCalls.length}`;
 ${EXPECTED_COLOR('- Expected')}
 ${RECEIVED_COLOR('+ Received')}
 
-${diffProps(calls[0][1], expected)!}
+${diffProps(calls[0][1], expected)}
 ${outro}`;
       }
 

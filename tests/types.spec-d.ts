@@ -16,6 +16,7 @@ describe('types', () => {
   });
 
   it('should partial the props', () => {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     expectTypeOf(expect(Mock).toHaveBeenRenderedWith)
       .parameter(0)
       .toEqualTypeOf<{ foo?: string }>();
