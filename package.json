@@ -63,7 +63,7 @@
     "react": "~19.2.0",
     "react-dom": "~19.2.0",
     "react-mock-component": "~5.0.0",
-    "standard-version": "~9.5.0",
+    "commit-and-tag-version": "~9.5.0",
     "strip-ansi": "~7.2.0",
     "tsdown": "~0.22.0",
     "typescript": "~6.0.0",
